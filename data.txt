@@ -1,0 +1,6 @@
+Login: ЧайкинД
+Passowrd: ДЧайкин12
+School: Гимназия № 5
+url: 'https://net-school.cap.ru/'
+
+
