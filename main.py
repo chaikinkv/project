@@ -8,6 +8,11 @@ from os.path import abspath
 
 
 def get_data(login, password, url, school, driver_src = abspath('chromedriver')):
+    """
+    на вход получает логин, пароль, название школы
+    возвращает DataFrame
+    """
+
 
     options = webdriver.ChromeOptions()
     options.headless = True
@@ -53,6 +58,9 @@ def get_data(login, password, url, school, driver_src = abspath('chromedriver'))
 
 
 def prepare_data_from_csv(data):
+    """
+    получает на вход файл .csv и возвращает словарь с оценками
+    """
     list_ = []
     marks = {}
 
@@ -83,6 +91,9 @@ def prepare_data_from_csv(data):
     return marks
 
 def prepare_data_from_site(data):
+    """
+    получает на вход pd.DataFrame полученный с помощью йункции get_data() файл и возвращает словарь с оценками
+    """
     list_ = []
     marks = {}
 
@@ -121,6 +132,9 @@ def choose_subj(marks):
     return subj_num
 
 def do_somthing_with_marks(marks, subj_num):
+    """
+    получает на вход словарь с оценками и номер выбранного предмета
+    """
     current_marks = []
 
     print('Предмет', list(marks.keys())[subj_num])
